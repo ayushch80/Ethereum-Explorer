@@ -49,7 +49,8 @@
           var timeM = timeN_ / 60
           var timeM_ = Math.floor( timeM );
           var _timeM = timeM_ + " minutes ago"
-          $('tbody').append("<tr><td>" + number + "</td><td>" + hash + "</td><td>" + _timeM + "</td></tr>");
+          var _data = `<tr><td> ${number} </td><td> ${hash} </td><td> ${_timeM} </td></tr>`
+          $('tbody').html(_data);
         } else {
         var _timeN = timeN_ + " seconds Ago"
         $('tbody').append("<tr><td>" + number + "</td><td>" + hash + "</td><td>" + _timeN + "</td></tr>");
