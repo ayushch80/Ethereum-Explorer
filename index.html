@@ -45,17 +45,21 @@
         var timeN = _curT - time
         var timeN_ = Math.ceil( timeN );
 
-        if ( timeN_ >= 60 ){
+        if ( timeN_ >= 120 ){
           var timeM = timeN_ / 60
           var timeM_ = Math.floor( timeM );
           var _timeM = timeM_ + " minutes ago"
           var _data = `<tr><td> ${number} </td><td> ${hash} </td><td> ${_timeM} </td></tr>`
           $('tbody').append(_data);
+        } else if ( timeN_ >= 60) {
+          var _timeI = "1 minute ago"
+          var _data = `<tr><td> ${number} </td><td> ${hash} </td><td> ${_timeI} </td></tr>`
+          $('tbody').append(_data);
         } else {
-        var _timeN = timeN_ + " seconds Ago"
-        var _data = `<tr><td> ${number} </td><td> ${hash} </td><td> ${_timeN} </td></tr>`
-        $('tbody').append(_data);
-      }
+          var _timeN = timeN_ + " seconds Ago"
+          var _data = `<tr><td> ${number} </td><td> ${hash} </td><td> ${_timeN} </td></tr>`
+          $('tbody').append(_data);
+        }
       }
     </script>
   </body>
