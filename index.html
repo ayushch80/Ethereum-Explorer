@@ -45,7 +45,7 @@
         var timeN = _curT - time
         var timeN_ = Math.ceil( timeN );
 
-        if ( timeN_ > 60 ){
+        if ( timeN_ >= 60 ){
           var timeM = timeN_ / 60
           var timeM_ = Math.floor( timeM );
           var _timeM = timeM_ + " minutes ago"
