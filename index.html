@@ -49,7 +49,7 @@
           var timeM = timeN_ / 60
           var timeM_ = Math.floor( timeM );
           var _timeM = timeM_ + " minutes ago"
-          var _data = `<tr><td> ${number} </td><td><a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> ${hash} </a></td><td> ${_timeM} </td></tr>`
+          var _data = `<tr><td> ${number} </td><td><a data-bs-toggle="collapse" href="#data" role="button" aria-expanded="false" aria-controls="collapseExample"> ${hash} </a><div class="collapse" id="collapseExample"> <div class="card card-body"> Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger. </div></div></td><td> ${_timeM} </td></tr>`
           $('tbody').append(_data);
         } else if ( timeN_ >= 60) {
           var _timeI = "1 minute ago"
